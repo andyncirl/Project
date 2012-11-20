@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  description: MyText
+  league: MyString
+  colour: MyText
+  brand: MyText
+  price: 1.5
+  image_url: MyString
+
+two:
+  name: MyString
+  description: MyText
+  league: MyString
+  colour: MyText
+  brand: MyText
+  price: 1.5
+  image_url: MyString

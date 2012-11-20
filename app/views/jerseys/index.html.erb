@@ -1,0 +1,46 @@
+<h1>Listing jerseys</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>League</th>
+    <th>Colour</th>
+    <th>Brand</th>
+    <th>Price</th>
+    <th>Image url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @jerseys.each do |jersey| %>
+      <tr class="<%= cycle('list_line_odd', 'list_line_even')%>">
+        <td><%= jersey.name %></td>
+        <td><%= jersey.description %></td>
+        <td><%= jersey.league %></td>
+        <td><%= jersey.colour %></td>
+        <td><%= jersey.brand %></td>
+        <td><%= jersey.price %></td>
+        <td><%= jersey.image_url%></td>
+
+
+              <td><%= link_to 'Show', jersey %></td>
+              <td><%= link_to 'Edit', edit_jersey_path(jersey) %></td>
+
+
+
+              </tr>
+          <% end %>
+   </table>
+
+          <%= form_tag jerseys_path, :method => 'get' do %>
+              <p>
+                <%= text_field_tag :search_query,params[:search_query]%>
+                <%= submit_tag "Search", :name => nil %>
+              </p>
+          <% end %>
+
+          <br />
+
+          <%= link_to 'New Jersey', new_jersey_path %>

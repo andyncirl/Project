@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @jersey.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @jersey.description %>
+</p>
+
+<p>
+  <b>League:</b>
+  <%= @jersey.league %>
+</p>
+
+<p>
+  <b>Colour:</b>
+  <%= @jersey.colour %>
+</p>
+
+<p>
+  <b>Brand:</b>
+  <%= @jersey.brand %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @jersey.price %>
+</p>
+
+<p>
+  <b>Image url:</b>
+  <%= @jersey.image_url %>
+</p>
+
+
+<%= link_to 'Edit', edit_jersey_path(@jersey) %> |
+<%= link_to 'Back', jerseys_path %>

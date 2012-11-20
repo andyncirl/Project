@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Project</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+| <%= link_to "Jerseys Catalogue", jerseys_path %> |
+<%= link_to "Leave Site", :controller => "welcome", :action => "thank_you"  %> |
+<%= link_to "Register", :controller => "welcome", :action => "register"  %> |
+<%= link_to "Home", :controller => "welcome", :action => "home"  %> |
+
+
+<%= yield %>
+
+</body>
+</html>
